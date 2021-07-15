@@ -1,0 +1,10 @@
+application:
+  name: ab-ecom
+  service: ab-ecom-email
+
+server:
+  port: 8084
+
+spring:
+  application:
+    name: ${application.name}
