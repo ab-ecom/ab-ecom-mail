@@ -2,9 +2,53 @@ application:
   name: ab-ecom
   service: ab-ecom-email
 
+mail:
+  toemail: anirudhb2b@gmail.com
+  fromemail: anirudhb2b@gmail.com
+  environment: Local
+  companies:
+    -
+      id: 1
+      name: COMPANY1
+      email: company1support@gmail.com
+    -
+      id: 2
+      name: COMPANY2
+      email: company2support@gmail.com
+    -
+      id: 3
+      name: COMPANY3
+      email: company3support@gmail.com
+  timesheets:
+    -
+      id: 1
+      name: Vendor
+    -
+      id: 2
+      name: Partner
+    -
+      id: 3
+      name: Client
+
+
 server:
   port: 8084
 
 spring:
   application:
     name: ${application.name}
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    properties:
+      mail:
+        smtp:
+          auth: false
+          starttls:
+            enable: true
+          ssl:
+            enable: false
+            trust: smtp.gmail.com
+      debug: false
+    username: anirudhb2b@gmail.com
+    password: snsdqdiqthxvkxsw

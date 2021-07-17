@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xml:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Mail template</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+    <div>
+        <div th:style="'background-color: #002c5f'">
+            <br />
+            <div>
+                <span th:style="'font-family: BryantPro-Medium,sans-serif; font-size: 20px; color: #ffff;'"
+                th:text="${header}">
+                </span>
+            </div>
+            <br />
+        </div>
+
+        <div th:style="'background-color: #e2e9ef, font-family: BryantPro-Medium,sans-serif; font-size: 16px;'">
+            <br />
+            <div>
+                <span th:style="'font-weight: bold;'">From Date: </span>
+                <span th:text="${fromDate}"></span>
+            </div>
+            <br />
+            <div>
+                <span th:style="'font-weight: bold;'">To Date: </span>
+                <span th:text="${toDate}"></span>
+            </div>
+            <br />
+        </div>
+    </div>
+</body>
+</html>
