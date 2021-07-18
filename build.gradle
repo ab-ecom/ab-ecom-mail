@@ -27,6 +27,11 @@ dependencies {
 	// Swagger
 	implementation 'org.springdoc:springdoc-openapi-ui:1.5.2'
 	implementation 'org.springdoc:springdoc-openapi-security:1.5.2'
+
+	// Actuator
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	// Prometheus
+	implementation 'io.micrometer:micrometer-registry-prometheus'
 }
 
 test {
