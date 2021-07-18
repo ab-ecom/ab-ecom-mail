@@ -1,6 +1,12 @@
 application:
   name: ab-ecom
-  service: ab-ecom-email
+  service: ab-ecom-mail
+
+info:
+  app:
+    name: ${application.service}
+    description: This is the application to manage mail API
+    version: 1.0
 
 mail:
   toemail: anirudhb2b@gmail.com
@@ -30,13 +36,21 @@ mail:
       id: 3
       name: Client
 
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 
 server:
   port: 8084
 
 spring:
   application:
-    name: ${application.name}
+    name: ${application.service}
   mail:
     host: smtp.gmail.com
     port: 587
@@ -52,3 +66,7 @@ spring:
       debug: false
     username: anirudhb2b@gmail.com
     password: snsdqdiqthxvkxsw
+  security:
+    user:
+      name: admin
+      password: admin
