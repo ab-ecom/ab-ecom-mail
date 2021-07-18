@@ -5,7 +5,7 @@ application:
 info:
   app:
     name: ${application.service}
-    description: This is the application to manage mail API
+    description: Application to manage mail API
     version: 1.0
 
 mail:
@@ -44,6 +44,12 @@ management:
     web:
       exposure:
         include: "*"
+  metrics:
+    export:
+      wavefront:
+        api-token: 1c28ac31-cfb3-4574-aef9-61d0afac7379
+        enabled: true
+        uri: https://wavefront.surf
 
 server:
   port: 8084
@@ -70,3 +76,8 @@ spring:
     user:
       name: admin
       password: admin
+
+wavefront:
+  application:
+    name: ${application.name}
+    service: ${application.service}
